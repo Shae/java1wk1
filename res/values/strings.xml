@@ -4,5 +4,14 @@
     <string name="app_name">java1wk1</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
+    <string name="bitConvTitle">Bit Conversion App</string>
+    <string name="bits">Bits</string>
+    <string name="bytes">Bytes</string>
+    <string name="kilobits">Kilobits</string>
+    <string name="kilobytes">Kilobytes</string>
+    <string name="megabits">Megabits</string>
+    <string name="megabytes">Megabytes</string>
+    <string name="gigabits">Gigabits</string>
+    <string name="gigabytes">Gigabytes</string>
 
 </resources>
