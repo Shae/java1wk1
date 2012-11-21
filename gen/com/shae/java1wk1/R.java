@@ -17,6 +17,8 @@ public final class R {
         public static final int menu_settings=0x7f070000;
     }
     public static final class integer {
+        /**  Setting up Integer Values for App 
+         */
         public static final int bits=0x7f030000;
         public static final int bytes=0x7f030001;
         public static final int gigabits=0x7f030006;
@@ -32,6 +34,8 @@ public final class R {
     public static final class string {
         public static final int app_name=0x7f040000;
         public static final int bitConvTitle=0x7f040003;
+        /**  Setting up String Values for App 
+         */
         public static final int bits=0x7f040004;
         public static final int bytes=0x7f040005;
         public static final int gigabits=0x7f04000a;

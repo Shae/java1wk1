@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
-    <integer name="bits">8000000000</integer>
-    <integer name="bytes">1000000000</integer>
+   <!-- Setting up Integer Values for App -->
+    <integer name="bits">8</integer>
+    <integer name="bytes">1</integer>
     <integer name="kilobits">8000000</integer>
     <integer name="kilobytes">1000000</integer>
     <integer name="megabits">8000</integer>
