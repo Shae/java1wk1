@@ -40,7 +40,7 @@ public class MainActivity extends Activity {
         
         TextView tv = new TextView(this);
         //tv.getBackground().setColorFilter(Color.parseColor("#00ff00"), null);
-        tv.setText("Conversion Table from Gigabytes!");
+        tv.setText(R.string.bitConvTitle);
         
         // Set text Size
         tv.setTextSize(20);

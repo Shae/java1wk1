@@ -4,7 +4,7 @@
     <string name="app_name">java1wk1</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
-    <string name="bitConvTitle">Bit Conversion App</string>
+    <string name="bitConvTitle">Conversion Table from Gigabytes!</string>
     
     <!-- Setting up String Values for App -->
     <string name="bits">Bits</string>
