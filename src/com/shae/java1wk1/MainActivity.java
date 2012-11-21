@@ -1,7 +1,5 @@
 package com.shae.java1wk1;
 
-import java.io.Console;
-import java.util.concurrent.CountDownLatch;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -113,7 +111,7 @@ public class MainActivity extends Activity {
 						"Gigabits: " + numGigabits + "\r\n" +
 						"Gigabytes: " + numGigabytes + "\r\n" +
 						"Terabytes: " + numTerabytes + "\r\n" +
-						"Terabytes: " + numPetabytes
+						"Petabytes: " + numPetabytes
 						);
 				}
 				else // If the user field is blank, else
