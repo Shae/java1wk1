@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
-        // setting up 
+        // setting up screen layout 
         LL = new LinearLayout(this);
         LL.setOrientation(LinearLayout.VERTICAL);
         LP = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
@@ -42,11 +42,13 @@ public class MainActivity extends Activity {
         et = new EditText(this);
         et.setHint("Enter Gigabytes");
         
+        ///////  NEW BUTTON  ///////////////
         Button b = new Button(this);
         b.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
+				
 				// Checking to see if the UIText field is empty or not
 				if(et.getText().toString().compareTo("") == 1)   // Testing to see if "et" is == to Empty string.  1 means NOT the same (not blank)
 				{
@@ -94,11 +96,26 @@ public class MainActivity extends Activity {
 						);
 				}
 				else
-				System.out.println("No Value in Box");
+					Log.i("TextField", "HAS NO DATA!!!");
 			}
 		});
-        
+       
         b.setText("Convert");
+        
+        
+        ///////  NEW BUTTON  ///////////////
+        Button c = new Button(this);
+        c.setText("Clear");
+        c.setOnClickListener(new View.OnClickListener() {
+        	
+        	@Override
+			public void onClick(View v) {
+        		result.setText("");
+        		et.setText("");
+        	}
+        	
+        	
+        });
         
         LinearLayout form = new LinearLayout(this);
         form.setOrientation(LinearLayout.HORIZONTAL);
@@ -107,6 +124,7 @@ public class MainActivity extends Activity {
         
         form.addView(et);
         form.addView(b);
+        form.addView(c);
         
         LL.addView(form);
         
