@@ -33,37 +33,50 @@ public class MainActivity extends Activity {
         // setting up screen layout 
         LL = new LinearLayout(this);
 		LL.setBackgroundColor(0xFF00FF00 ); // set app BG to Lime Green
-        LL.setOrientation(LinearLayout.VERTICAL);
+        LL.setOrientation(LinearLayout.VERTICAL); // set app main run layout as Vertical
         LP = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+        // setting the Parameters of the window for LL to the device window
         LL.setLayoutParams(LP);
         
         TextView tv = new TextView(this);
         //tv.getBackground().setColorFilter(Color.parseColor("#00ff00"), null);
         tv.setText("Conversion Table from Gigabytes!");
-        tv.setTextSize(18);
+        
+        // Set text Size
+        tv.setTextSize(20);
+        
+        // set line centered Horizontally
         tv.setGravity(Gravity.CENTER_HORIZONTAL);
         
         LL.addView(tv);
         
         setContentView(LL);
         
+        // Set ET to become NEW EditText field
         et = new EditText(this);
+        
+        // set ET attributes
         et.setHint("Enter Gigabytes");
+        et.setBackgroundColor(Color.WHITE);
         
         ///////  NEW BUTTON  ///////////////
         Button b = new Button(this);
+        b.setBackgroundColor(Color.LTGRAY);
+     // create eventListener for 1st Button and BG color
         b.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
+			
 			public void onClick(View v) {
 
-				// Checking to see if the UIText field is empty or not
+				// Checking to see IF the UIText field is empty or not
+				// DOES NOT VALIDATE to check if an INT.  Will crash on letter, does nothing on decimal point add
 				if(et.getText().toString().compareTo("") == 1)   // Testing to see if "et" is == to Empty string.  1 means NOT the same (not blank)
 				{
 				Log.i("TextField", "HAS DATA");
 
 				
-				// telling values where to find the data in Resources 
+				// Settings Vars using Resources 
 				int bits = getResources().getInteger(R.integer.bits);
 				int bytes = getResources().getInteger(R.integer.bytes);
 				int kilobits = getResources().getInteger(R.integer.kilobits);
@@ -103,27 +116,35 @@ public class MainActivity extends Activity {
 						"Terabytes: " + numPetabytes
 						);
 				}
-				else
+				else // If the user field is blank, else
 				{
+					// If the user input field is blank, LOG this
 					Log.i("TextField", "HAS NO DATA!!!");
 				}
-				result.setTextColor(Color.RED);
-				result.setTextSize(18);
+				// Setting the text size and color and weight for the Result TextView
+				result.setTextColor(Color.YELLOW);
+				result.setTextSize(20);
+				result.setTypeface(null, 1);
 			}
 		
 		});
-       
+       // Setting the 1st buttons text
         b.setText("Convert");
         
         
         
         ///////  NEW BUTTON  ///////////////
         Button c = new Button(this);
+        // setting the 2nd buttons text and BG color
         c.setText("Clear");
+        c.setBackgroundColor(Color.LTGRAY);
+        
+        // create eventListener for 2nd Button
         c.setOnClickListener(new View.OnClickListener() {
         	
         	@Override
 			public void onClick(View v) {
+        		// resetting values and textViews
         		result.setText("");
         		et.setText("");
         	}
@@ -131,28 +152,38 @@ public class MainActivity extends Activity {
         	
         });
         
+        
+        // adding a new layout
         LinearLayout form = new LinearLayout(this);
         form.setOrientation(LinearLayout.HORIZONTAL);
         LP = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         form.setLayoutParams(LP);
-        
+        // adding the EditText Field, Convert Button and Clear Button to the "form" layout
         form.addView(et);
         form.addView(b);
         form.addView(c);
         
+        form.setGravity(Gravity.CENTER_HORIZONTAL);
+        
+        // adding the "form" layout to the "main" layout
         LL.addView(form);
         
         
         
         result = new TextView(this);
+        // adding the result to the main layout
         LL.addView(result);
         
+        // setting the content of the device window to view the "main" layout and its sub-views
         setContentView(LL);
         
-        
+        ///////////////////////////////////////////////////////////
         ////  LOOOOOOOOP  (see my loop in the LogCat) /////////////  
+        ///////////////////////////////////////////////////////////
+        
         for(int i=0, j=10 ; i<j; i++){
         	Log.i("LOOP", "count" + (i + 1));
+        	// log count 1 - 10
         	}
 
         
